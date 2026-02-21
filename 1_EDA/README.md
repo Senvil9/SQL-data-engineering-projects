@@ -68,9 +68,9 @@ By querying across these interconnected tables, I extracted insights about skill
 
 ### Query Structure
 
-1. **[Top Demanded Skills](1_EDA\01_top_demanded_skills.sql)** – Identifies the 10 most in-demand skills for remote data engineer positions
-2. **[Top Paying Skills](1_EDA\02_highest_paying_skills.sql)** – Analyzes the 25 highest-paying skills with salary and demand metrics
-3. **[Optimal Skills](1_EDA\03_optimal_skills_de.sql)** – Calculates an optimal score using natural log of demand combined with median salary to identify the most valuable skills to learn
+1. **[Top Demanded Skills](https://github.com/Senvil9/SQL-data-engineering-projects/blob/main/1_EDA/01_top_demanded_skills.sql)** – Identifies the 10 most in-demand skills for remote data engineer positions
+2. **[Top Paying Skills](https://github.com/Senvil9/SQL-data-engineering-projects/blob/main/1_EDA/02_highest_paying_skills.sql)** – Analyzes the 25 highest-paying skills with salary and demand metrics
+3. **[Optimal Skills](https://github.com/Senvil9/SQL-data-engineering-projects/blob/main/1_EDA/03_optimal_skills_de.sql)** – Calculates an optimal score using natural log of demand combined with median salary to identify the most valuable skills to learn
 
 ### Key Insights
 
