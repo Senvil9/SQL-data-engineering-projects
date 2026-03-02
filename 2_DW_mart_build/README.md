@@ -51,7 +51,6 @@ Raw job posting data arrives as flat CSV files in Google Cloud Storage—not str
 ├── 04_create_skills_mart.sql      # Skills demand mart
 ├── 05_create_priority_mart.sql    # Priority roles mart
 ├── 06_update_priority_mart.sql    # Priority mart incremental update (MERGE)
-├── 07_create_company_mart.sql     # Company hiring mart (optional)
 ├── build_dw_marts.sql             # Master SQL build script
 └── README.md                       # You are here
 ```
@@ -111,20 +110,6 @@ Priority role tracking with incremental updates using MERGE operations.
 - **Grain:** One row per job posting with priority level assignment
 - **Key Features:** **MERGE operations for incremental updates** - demonstrates production-ready upsert patterns (INSERT, UPDATE, DELETE in single statement)
 
-### Company Mart (Optional)
-
-Company hiring trends by role, location, and month.
-
-![Company Mart Schema](Images\1_2_Company_Mart.png)
-
-- **SQL File:** [`07_create_company_mart.sql`](./07_create_company_mart.sql) – Builds company hiring trends mart (optional)
-- **Purpose:** Company hiring trends analysis by role, location, and month
-- **Grain:** `company_id + job_title_short_id + location_id + month_start_date`
-- **Key Features:** Bridge tables for many-to-many relationships (company-location, job title hierarchies)
-- **Note:** This mart is optional and can be skipped if not needed
-
----
-
 ## 💻 Data Engineering Skills Demonstrated
 
 ### ETL Pipeline Development
@@ -161,4 +146,5 @@ Company hiring trends by role, location, and month.
 - **Data Validation:** Verification queries at each pipeline step to ensure data integrity  
 - **Type Safety:** Proper data type definitions (`VARCHAR`, `INTEGER`, `DOUBLE`, `BOOLEAN`, `TIMESTAMP`)  
 - **Schema Organization:** Separate schemas (`flat_mart`, `skills_mart`, `priority_mart`, `company_mart`) for logical separation  
+
 - **Error Handling:** Structured script execution with clear error messages and progress reporting  
